@@ -1,5 +1,5 @@
   
-<label for="">Amount: </label>
+<label for="">Amount (min 100): </label>
 <input type="text" id="order-amt">
 <br>
 <!-- Get order id from razorpay -->
@@ -11,7 +11,7 @@
         var params = {
             amount: document.getElementById("order-amt").value,
             currency: "INR",
-            receipt: "wthcoding001",
+            receipt: "chaiwala",
             payment_capture: '1'
         };
         var xmlHttp = new XMLHttpRequest();
@@ -39,8 +39,8 @@
         var options = {
             "key": "<%= key %>",
             "currency": "INR",
-            "name": "WTH Coding",
-            "description": "WtH Coding Transaction",
+            "name": "Chai Wala",
+            "description": "Chai wala transaction",
             "order_id": document.getElementById("rzp-text").value,
             "handler": function(response) {
                 document.getElementById('order-pay-id').value = response.razorpay_payment_id;
